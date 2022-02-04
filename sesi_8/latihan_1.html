@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Judul</h1>
+    <script>
+        
+        var manusia = {
+            nama : "jarot",
+            gender : "Laki-Laki",
+            beratBadan : 70,
+            hobi : ["renang", "makan"],
+            makan : function () {
+                this.beratBadan++;
+                console.log("BB setelah makan, ", this.beratBadan); 
+            }, olahRaga : function () {
+                this.beratBadan--;
+                console.log("BB setelah olahraga, ", this.beratBadan); 
+            }
+        };
+
+        console.log(manusia.beratBadan); // dot notation
+        console.log(manusia["beratBadan"]); // bracket notation
+
+        manusia.makan();
+        // console.log(manusia.beratBadan); 
+
+        manusia.olahRaga();
+        // console.log(manusia.beratBadan); 
+
+
+
+        // constructor
+        var person = function (name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        // membuat object menggunakan constructor dan function new 
+        var jarot = new person("jarot", 30);
+        console.log(jarot.name);
+
+
+        class Manusia {
+            constructor(nama, umur) {
+                this.nama = nama;
+                this.umur = umur;
+            }
+        }
+
+        var jarotKedua = new Manusia("jarot", 31);
+        console.log(jarotKedua.umur);
+
+
+
+
+
+    var dogs = [{
+        name: 'Henry',
+        age: 0.5,
+        breed: 'Aussie',
+        food: 'kibble',
+        toys: ['tennis ball', 'chew toy'],
+        picture: 'http://rubyriverminiaustralianshepherds.com/wp-content/uploads/aussie-puppy-for-sale-940x412.jpg'
+    }, {
+        name: 'Tilly',
+        age: 5,
+        breed: 'Mutt',
+        food: 'kibble',
+        toys: ['bone', 'kong', 'squeaky toy'],
+        picture: 'http://www.dogchannel.com/images/zones/top_promo/excited-mixed-breed.jpg'
+    }, {
+        name: 'Apollo',
+        age: 10,
+        breed: 'Labrador',
+        food: 'absolutely anything',
+        toys: ['old sock', 'other old sock', 'more old socks'],
+        picture: 'http://media.cmgdigital.com/shared/img/photos/2014/08/01/5a/66/LadyLabrador.jpg'
+    }];
+
+
+    console.log(dogs[0].toys[1]);
+
+
+
+    // buat sebuah object untuk menyimpan data "nama depan" dan "nama belakang"
+    // dan object tersebut mempunyai method "fullName" 
+    // dimana fungsinya adalah untuk menggabungkan nama depan dan belakang 
+
+    // munculkan nama lengkap object tersebut di console
+
+    // 7.57
+
+
+    var orang = {
+        namaDepan : "Jarot",
+        namaBelakang: "Junior",
+        namaLengkap: function () {
+            return this.namaDepan + " " + this.namaBelakang
+        }
+    };
+
+    console.log(orang.namaLengkap());
+
+    // mendapatkan list keys/properties yang dimiliki oleh sebuah object
+    var propertyOrang = Object.keys(orang);
+    console.log(propertyOrang);
+
+    console.log(orang[propertyOrang[1]]);
+
+    </script>
+</body>
+</html>

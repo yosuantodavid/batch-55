@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1</title>
+</head>
+<body>
+    <h1>Judul</h1>
+    <script>
+        var angka = 8; // number / tunggal
+        var text = "halo apa kabar"; // string / tunggal
+
+        // ** ARRAY ** //
+        var buahBuahan = ["Apel", "Jeruk"]; // jamak
+        // index adalah lokasi value 
+        // length adalah jumlah value
+
+        console.log(angka);
+        console.log(text);
+        console.log(buahBuahan);
+        console.log(buahBuahan[1]); // memunculkan nilai di index 1 dari array buahBuahan
+
+        // ** OBJECT ** //
+        // object punya property
+
+        var apel = {
+            "nama" : "Apel Fuji",
+            "warna" : "Merah", 
+            "hargaPerKg" : 15000
+        };
+
+        var jeruk = {
+            "nama" : "Jeruk Nipis",
+            "warna" : "Hijau", 
+            "hargaPerKg" : 5000
+        };
+
+        var keranjangBuah = [apel, jeruk];
+        console.log(keranjangBuah);
+        console.log(keranjangBuah[1].hargaPerKg);
+
+
+
+        // buatlah 2 object mobil
+        // disimpan ke dalam variable array garasi
+        // object mobil memiliki property 
+        // - merek 
+        // - tahunKeluaran
+
+        // munculkan tahunKeluaran dari mobil pertama di variable garasi
+        // sampai jam 19.47
+
+        var angka = 10;
+        angka++;
+        console.log(angka);
+        
+    </script>
+</body>
+</html>

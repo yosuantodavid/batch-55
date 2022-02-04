@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan 3</title>
+    <style>
+        .ganjil {
+            color: red;
+        }
+
+        .genap {
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="target">
+        <!-- <p>1</p> <hr>
+        <p>2</p> <hr>
+        <p>3</p>  -->
+    </div>
+
+    <script>
+        // Buat variabel n beri nilai angka/number.
+        // n = 6
+        // Memakai while loop buat sebuah satu string/kalimat yang berisi 
+        // angka 1 sampai n, dipisahkan oleh koma
+        // “1,2,3,4,5,6” 
+
+        // sampai jam 9.30
+
+        var n       = 9; 
+        var i       = 0;
+        var text    = '';
+
+        while (i<n) {
+            i++; // nilai akan ditambah 1 increment
+            var warna = '<p class="ganjil">';
+            
+            if (i%2 == 0) {
+                warna = '<p class="genap">'; 
+            };
+            
+            text += warna + i + "</p>";
+
+            // jika bukan angka terakhir
+            if (i != n) {
+                text += "<hr>";
+            };
+        };
+
+        console.log(text);
+        document.getElementById("target").innerHTML = text;
+
+
+        // Bikin supaya angka yg ganjil warnanya merah, yg genap warnanya hijau
+        // gunakan modulus 2 (i%2) untuk validate apakah angka itu ganjil atau genap
+        // 9.57
+
+
+
+
+
+
+
+        // document.getElementById("target").innerHTML = "<p>" + text + "</p>";
+
+
+    </script>
+</body>
+</html>

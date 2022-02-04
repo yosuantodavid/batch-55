@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Judul</h1>
+    <script>
+        var buahBuahan = ["jeruk", "apel", "nangka"];
+        // buahBuahan[3] = "durian";
+        // buahBuahan[4] = "belimbing";
+        // buahBuahan[0] = "naga";
+        // buahBuahan[buahBuahan.length] = "salak";
+
+        console.log("nilai awal array", buahBuahan);
+
+        // menambahkan value ke dalam array dari index paling terakhir
+        buahBuahan.push("salak");
+        console.log("nilai setelah push", buahBuahan);
+
+        // hapus dari paling akhir
+        buahBuahan.pop();
+        console.log("nilai setelah pop", buahBuahan);
+
+        //unshift nambahin value dari depan
+        buahBuahan.unshift("durian");
+        console.log("nilai setelah unshift", buahBuahan);
+
+        //shift remove value dari depan
+        buahBuahan.shift();
+        console.log("nilai setelah shift", buahBuahan);
+
+        // splice untuk menghapus
+        var garasiMotor = ["beat", "vario", "mio"]
+        var mulaiDariIndexBerapa = 1;
+        var hapusBerapaValue = 2;
+        console.log("nilai garasi motor", garasiMotor);
+
+        // garasiMotor.splice(mulaiDariIndexBerapa, hapusBerapaValue);
+        // console.log("nilai garasi motor setelah splice", garasiMotor);
+
+        // splice untuk menambahkan value
+        garasiMotor.splice(1, 1, "supraX", "gesit");
+        console.log("nilai garasi motor setelah splice", garasiMotor);
+
+        // concat, gabungin 2 array
+        var keranjangBuahSatu = ["apel", "jeruk"];
+        var keranjangBuahDua = ["durian", "mangga"];
+        console.log("keranjangBuahSatu", keranjangBuahSatu);
+        console.log("keranjangBuahDua", keranjangBuahDua);
+
+        var keranjangBesar = keranjangBuahSatu.concat(keranjangBuahDua);
+        console.log("keranjangBesar", keranjangBesar);
+
+        // slice, untuk clone array
+        var keranjangKecil = keranjangBuahSatu.slice();
+        console.log("keranjangKecil", keranjangKecil);
+
+
+
+        // sorting alfabet
+        var garasiMobil = ["Calya", "Alya", "City", "Jazz"];
+        console.log("garasiMobil", garasiMobil);
+
+        garasiMobil.sort();
+        console.log("garasiMobil sort", garasiMobil);
+
+        garasiMobil.reverse();
+        console.log("garasiMobil reverse", garasiMobil);
+
+
+        // sorting number
+        var kumpulanAngka = [40, 100, 1, 5, 25, 10];
+        // points.sort(function(a, b){return a - b});
+        console.log("kumpulanAngka", kumpulanAngka);
+
+        // soring number
+        kumpulanAngka.sort(function(a, b){return a - b});
+        console.log("kumpulanAngka sort ascending", kumpulanAngka);
+
+        // reverse number
+        kumpulanAngka.sort(function(a, b){return b - a});
+        console.log("kumpulanAngka sort descending", kumpulanAngka);
+
+        // membuat array dari string
+        var kalimat = "halo apa kabar";
+        var kataDalamKalimat = kalimat.split(" ");
+        console.log("kataDalamKalimat", kataDalamKalimat);
+
+
+
+        // Math object
+        // > Math.pow(9, 2)
+        console.log("Math.pow(9, 2)", Math.pow(9, 2));
+
+        // > Math.random()
+        console.log("Math.random()", Math.random());
+
+        // > Math.floor(7.2)
+        console.log("Math.floor(7.2)", Math.floor(7.2));
+
+        // > Math.ceil(7.2)
+        console.log("Math.ceil(7.2)", Math.ceil(7.2));
+
+        // > Math.ceil( Math.random() * 10 )
+        console.log("Math.ceil( Math.random() * 10 )", Math.ceil( Math.random() * 10 ));
+
+        // var nama = "Jarot";
+        // var ucapkanSelamatData = function () {
+        //     let ucapan = "halo selamat datang ";
+        //     console.log(ucapan + nama);
+        // }
+
+        var buletinKeAtas = function (num) {
+            return Math.ceil(num);
+        }
+
+        var numbers = [65.3, 44.6, 12.2, 4.1];
+        console.log("numbers", numbers);
+
+        var newArr = numbers.map(buletinKeAtas)
+        console.log("newArr", newArr);
+
+        
+        
+        
+        
+        
+        
+        
+        // minta user masukkan nama mereka 
+        // dan jenis kelamin mereka (male, female)
+        // kemudian keluarkan ramalan mengenai pasangan dan jumlah anak mereka
+
+        // jarot // male
+        // kamu akan memiliki istri Yuni Sara
+        // dan akan memiliki 10 anak
+
+        // 8.38
+
+        var nama    = prompt("masukin nama kamu");
+        var gender  = prompt("masukin jenis kelamin kamu : L / P");
+
+        var pasanganPria    = ["Syaipul Jamil", "David Bekam", "Jarot"];
+        var pasanganWanita  = ["Yuni Sara", "Anya", "Susi"];
+
+        var randomized      = Math.floor(Math.random() * 3);
+        var ramalanPasangan = pasanganWanita[randomized];
+        if (gender == "P") {
+            ramalanPasangan = pasanganPria[randomized];
+        };
+        var ramalanAnak     = Math.ceil(Math.random() * 5);
+
+        console.log("kamu akan memiliki pasangan " + ramalanPasangan);
+        console.log("dan akan memiliki " + ramalanAnak + " anak");
+
+
+
+     
+
+
+
+    </script>
+</body>
+</html>

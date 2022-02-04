@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        // function reuseable / bisa digunakan dipanggil kembali
+        // declare
+        var selamatDatang = function() {
+            console.log("Halo selamat datang!!");
+        };
+
+        // function selamatDatang() {
+        //     console.log("Halo selamat datang!!");
+        // };
+
+        // ES6 arrow
+        // var selamatDatang = () => console.log("Halo selamat datang!!");
+
+        //call
+        selamatDatang();
+
+
+
+        
+        // function dengan parameter
+        // function dengan side effect
+        // var jumlahkan = function(angkaPertama, angkaKedua) {
+        //     var hasil = parseInt(angkaPertama) + parseInt(angkaKedua);
+        //     console.log(hasil);
+        // };
+
+        // // call
+        // var angkaPertamaUser = prompt("masukkan angka pertama");
+        // var angkaKeduaUser = prompt("masukkan angka kedua");
+        // jumlahkan(angkaPertamaUser, angkaKeduaUser);
+
+
+
+        var jumlahkan = function(angkaPertama, angkaKedua) {
+            // mengembalikan nilai dari proses penjumlahan
+            return parseInt(angkaPertama) + parseInt(angkaKedua);
+        };
+
+        // call
+        // var angkaPertamaUser = prompt("masukkan angka pertama");
+        // var angkaKeduaUser = prompt("masukkan angka kedua");
+        // console.log(jumlahkan(angkaPertamaUser, angkaKeduaUser));
+
+
+
+        // minta user masukkan hargaBarang dan taxRate dalam scale 1-100
+        // function untuk hitung harga final yg harus dibayar user
+
+        // masukin hargaBarang 100000
+        // masukin taxRate 10 (artinya 10%)
+        // function akan memunculkan nilai 110000
+
+        // sampai jam 8.27
+
+        // default value di parameter function
+        // var kalikan = function (angka_1, angka_2, angka_3=1, angka_4=1) {
+        //     return angka_1 *  angka_2 * angka_3 * angka_4;
+        // }
+
+        // var hasilPerkalian = kalikan(10,10);
+        // console.log(hasilPerkalian);
+
+        var ucapkanSelamatDatang = function (nama, tipeUcapan=0) {
+            // local variable
+            // dalam ES6 menggunakan let instead of var
+            let kumpulanUcapan = [
+                "Halo selamat datang, ",
+                "Hi welcome to my website, "
+            ];
+
+            return kumpulanUcapan[tipeUcapan]+nama;
+        };
+        
+        var namaUser = prompt("masukkan nama kamu");
+        console.log(ucapkanSelamatDatang(namaUser,1));
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+/* kita bisa nulis styling di sini */
+/* selector menggunakan tag HTML */
+p {
+    color:firebrick; 
+    font-size:20px; 
+    font-weight: bolder; 
+    font-style:italic;
+}
+
+/* CLASS selector */
+.orange {
+    color: orange;
+}
+
+.bigger-font {
+    font-size: 30px;
+}
+
+/* ID selector
+komentar baris kedua */
+#title {
+    font-size: 60px;
+    font-weight: bold;
+    color: green;
+}

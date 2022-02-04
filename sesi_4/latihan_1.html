@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesi 4</title>
+    <style>
+        body { 
+            background-color: lemonchiffon;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="judul">I Love Javascript</h1>
+    <script>
+        // INPUT
+        // initiate variable
+        var price
+        var taxRate
+        var tax
+        var total
+        
+        // assignment / memberikan / menyimpan nilai/value
+        price = prompt("Masukkan price")
+        price = parseInt(price)
+        
+        taxRate = prompt("Masukkan taxRate")
+        taxRate = parseInt(taxRate)
+
+        // PROCESS
+        tax = price * taxRate/100
+        total = price + tax
+
+        // OUTPUT
+        console.log('Product tax = '+tax)
+        console.log("Product total price = "+total)
+        
+        // OUTPUT
+        // alert("ini adalah alert menggunakan JS");
+        // console.log("ini muncul di console");
+        // document.getElementById("judul").innerHTML = 1 + 1;
+    </script>
+</body>
+</html>

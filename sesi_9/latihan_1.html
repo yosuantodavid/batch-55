@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h1>judul</h1>
+
+    <script>
+        // memastikan elemen HTML ter-load terlebih dahulu
+        // baru kemudian pelakukan AJAX/API call
+        (function() {
+
+            var req = new XMLHttpRequest();
+
+            req.open("GET", "https://randomuser.me/api/", true);
+            req.send();
+            req.onload = function() {
+                console.log("onload");
+                var data = JSON.parse(this.responseText);
+                console.log(data.results[0]);
+            }
+
+        })();
+
+        // 8 12
+        
+
+
+
+        // req.onerror = function() {
+        //     console.log("onerror");
+        // }
+
+        // req.onprogress = function() {
+        //     console.log("onprogress");
+        // }
+
+        // req.onreadystatechange = function() {
+        //     console.log("onreadystatechange", this.readyState);
+        //     console.log("onreadystatechange", this.status);
+
+        //     // kalau server berhasil melayani AJAX/API request kita
+        //     if (this.readyState == 4 && this.status == 200) {
+        //         console.log("sukses");
+
+        //         var data = JSON.parse(this.responseText);
+
+        //         console.log(data.results[0]);
+
+        //         // convention
+        //     } else if (this.readyState == 4 && this.status == 404) {
+        //         console.log("endpoint tidak ditemukan");
+        //     } else if (this.readyState == 4 && this.status == 500) {
+        //         console.log("server sedang bermasalah");
+        //     }
+
+        // }
+        // sampai 7.26
+        // method GET (list atau details), 
+        // POST (menyimpan data), 
+        // PUT (modify, edit)
+        // DELETE (delete)
+
+        // endpoint : link/url dari API
+
+
+
+
+        // console.log(JSON.parse(this.responseText).results);
+    </script>
+</body>
+</html>

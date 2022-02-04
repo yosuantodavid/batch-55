@@ -1,0 +1,41 @@
+/* mencari element yg memiliki class bolder AND bigger
+kalau salah satu ga berhasil ke-select */
+.bolder.bigger {
+    font-size: 50px;
+    font-weight: bold;
+    color: red;
+}
+
+/* mencari element dengan class bigger yang dimana element itu 
+berada di dalam element dengan class container */
+.container .bigger {
+    font-style: italic;
+}
+
+/* mencari element yg memiliki class bigger */
+.bigger {
+    text-align: center;
+}
+
+.container:hover {
+    background-color: slategray;
+}
+.container:active {
+    background-color: yellow;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: yellow;
+}
+
+a:active {
+    color: orange;
+}

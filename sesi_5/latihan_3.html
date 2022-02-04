@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 3</title>
+</head>
+<body>
+    <h1 id="profile"></h1>
+    <p>
+        Nama <input type="text" id="nama">
+    </p>
+    <p>
+        Hobi <input type="text" id="hobi">
+    </p>
+    <input type="button" value="Simpan" onclick="simpan()">
+
+    <script>
+        // event handling
+        var simpan = function () {
+            var nama = document.getElementById("nama").value;
+            var hobi = document.getElementById("hobi").value;
+
+            document.getElementById("profile").innerHTML = nama + ", " + hobi;
+            console.log(nama);
+            console.log(hobi);
+        };
+    </script>
+</body>
+</html>
