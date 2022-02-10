@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css -->
+    <style>
+        #target {
+            color: green;
+        }
+
+        .cetak-miring {
+            font-style: italic;
+        }
+
+        #paragraf-2 {
+            display: none;
+        }
+
+        #paragraf-4 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="target">Haloha</h1>
+
+    <div class="card">
+        <p>paragraf</p>
+        <p>paragraf</p>
+    </div>
+
+    <hr>
+    <p id="paragraf-1">text text 1</p>
+    <p id="paragraf-2">text text 2</p>
+    <p id="paragraf-3">text text 3</p>
+    <p id="paragraf-4">text text 4</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // menunggu sampai semua HTML component kita selesai dirender oleh browser
+        $(document).ready(function () {
+            // nulis di sini
+            // $ sign sebagai selector
+            $("h1").text("Hi there");
+
+            //function css untuk melakukan styling menggunakan jquery
+            // $("#target").css("property", "value");
+            // $("#target").css("font-size", "40px");
+            $("#target").css({
+                "font-size" : "40px",
+                "color" : "red"
+            });
+
+            // attr untuk merubah attribute sebuah element HTML
+            $("#target").attr("class", "cetak-miring");
+
+            // render tag HTML (behaviornya adalah replacing)
+            // $(".card").text("<h2>sub judul</h2>");
+            // $(".card").html("<h2>sub judul</h2>");
+            $(".card").html("<h2>sub judul terakhir</h2>");
+
+            // .append mirip seperti.html tetapi behaviornya adalah menambahkan
+            $(".card").append("<p>paragraf 1</p>");
+            $(".card").append("<p>paragraf 2</p>");
+
+
+            // .hide .show untuk menyembunyikan element tertentu
+            $("#paragraf-1").hide();
+            $("#paragraf-2").show();
+
+            $("#paragraf-3").fadeOut(); // .slideUp mirip sama hide
+            $("#paragraf-4").fadeIn(); // .slideDown mirip sama show
+
+        });
+
+
+
+        
+
+
+    </script>
+</body>
+</html>

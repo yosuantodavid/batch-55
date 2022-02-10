@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dibuat-beda {
+            color: white;
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>theme changer</h1>
+
+    <input type="text" id="inputan" placeholder="masukkan nama kamu">
+
+    <p>paragraf 1</p>
+    <p>paragraf 2</p>
+    <p>paragraf 3</p>
+    <p>paragraf 4</p>
+    <p>paragraf 5</p>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        
+        
+        $(document).ready(function () {
+            // THEME CHANGER // sampai 8.13
+
+            // Ada 3 warna -> red, yellow, green
+            // Minta  user untuk memilih warna
+            // Warna yang dipilih dijadikan background website, 
+                // jadikan text color jadi putih
+                
+
+            var gantiTema = function () {
+                var warna = prompt("masukkan warna : red, yellow, green");
+                $("body").css({
+                    "background-color" : warna,
+                    "color" : "white"
+                });
+            };
+            
+            // callback
+            // $("h1").click(gantiTema);  
+            // $("h1").on("mouseover", gantiTema); 
+            $("h1").on("mouseover", function () {
+                console.log("mouseover");
+            });   
+
+            $("h1").on("click", function () {
+                console.log("click");
+            });   
+            
+            // sampai 8.49
+            // mouseleave
+            // keypress
+            // focus
+            // blur
+            // dblclick
+
+            
+            // sampai 8.35
+            // Ada 3 hewan peliharaan  -> kucing, kelinci, hamster
+            // Minta  user untuk memilih favorit hewan
+            // Munculkan gambar hewan favorit si user
+
+
+            // 8.57
+            
+
+
+
+            // 9.07
+            // Bikin HTML yang memiliki 5 paragraf
+            // Tiap paragraf diberikan id yang berbeda beda (unik)
+            // Rubah font-color dan background dari paragraf yang sudah di-klik
+            // Ketika klik paragraf tertentu, pastikan paragraf yang lain style-nya normal
+            $("p").on("click", function () {
+                $("p").removeClass("dibuat-beda");
+                $("p").text("paragraf");
+
+                $(this).addClass("dibuat-beda");
+                $(this).text("sedang di-klik");
+            });
+
+
+
+            $("#inputan").on("keypress", function(event) {
+                // keyCode untuk dapetin kode dari key yg kita pencet di keyboard
+                var kode = event.keyCode;
+                console.log(kode);
+
+                // artinya user udah hit ENTER
+                if (kode == 13) {
+                    // .val dipakai untuk mendapatnya value dari input
+                    var nama = $(this).val();
+                    console.log(nama);
+                    $("h1").text(nama);
+                };
+            });
+
+
+
+        });
+
+        
+
+        
+
+        
+
+
+        
+    </script>
+</body>
+</html>

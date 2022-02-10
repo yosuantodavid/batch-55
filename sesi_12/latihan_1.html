@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var text = "Belajar aaaaaaJavascriptttttt javascript";
+        var pola = /\bjavascript\b/gi; 
+
+        // untuk cek apakah di dalam string ada string sesuai pola yg kita define 
+        var hasil = pola.test(text);
+        console.log("hasil", hasil);
+
+        // regex itu case sentitive
+        // incase sensitive bisa pakai i
+        // mencari secara global pakai g
+
+        // .exec
+        var hasil2 = pola.exec(text);
+        console.log("hasil2", hasil2);
+
+        // .match
+        var hasil3 = text.match(pola);
+        console.log("hasil3", hasil3);
+
+        // \b
+
+        // 7.41
+        // a) Check if the given input strings contain "is" or the "as" whole words.
+
+        var str1 = 'is; (this)'
+        var str2 = "The food isn't good"
+        var str3 = 'the2 cats'
+        var str4 = 'switch on the light'
+
+        pola1 = /\bis\b/; 
+        pola2 = /\bas\b/; 
+
+        // polaX = /\bis\b | \bas\b/;
+        console.log(pola1.test(str1) || pola2.test(str1));
+        console.log(pola1.test(str2) || pola2.test(str2) );
+        console.log(pola1.test(str3) || pola2.test(str3) );
+        console.log(pola1.test(str4) || pola2.test(str4) );
+
+
+        var text = "Do you know if this is all there is?";
+        var pattern = /[^oy]/gi;
+
+        console.log(text.match(pattern))
+        // console.log(pola.test(pattern))
+
+        // bag, bug, big
+
+        // var text = "bag big bug";
+        // var pattern = /b[aui]g/gi;
+
+        // console.log(text.match(pattern))
+        // console.log(pola.test(pattern))
+
+
+        var text = 'They ate 5 apples and 5 oranges';
+        var pola = /5/g;
+        var result = text.replace(pola, "five");
+
+        console.log(result);
+
+        // 8.18
+        // 'bred red spread credible red;'
+        // ganti red jadi brown
+
+        
+        
+
+    </script>
+</body>
+</html>

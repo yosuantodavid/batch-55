@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="target">Haloha</h1>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // menunggu sampai semua HTML component kita selesai dirender oleh browser
+        $(document).ready(function () {
+
+            // synchronous
+            // console.log('halo 1');
+            // console.log('halo 2');
+            // console.log('halo 3');
+
+            // asynchronous
+            // setTimeout(function () {
+            //     console.log('halo 1');
+            // }, 1000);
+
+            // setTimeout(function () {
+            //     console.log('halo 2');
+            // }, 4000);
+
+            // setTimeout(function () {
+            //     console.log('halo 3');
+            // }, 1000);
+
+
+            var products = [
+                {
+                    name : "Xiaomi monitor 27 inch",
+                    price : 5000000
+
+                }, {
+                    name : "LG monitor 24 inch",
+                    price : 3000000
+                }
+            ];
+
+            // function untuk menambahkan product
+            // kita memanggil API dan memerlukan proses time 3 detik
+            var addProduct = function (prod) {
+                // menerima 2 param : resolve, reject
+                return new Promise(function (resolve, reject) {
+                    setTimeout(function () {
+                        products.push(prod);
+                        
+                        var apakahBerhasil = false;
+                        if (apakahBerhasil) {
+                            resolve({
+                                result : products,
+                                status : "success"
+                            });
+                        } else {
+                            reject({
+                                result : [],
+                                status : "error"
+                            });
+                        }
+                    }, 2000);
+                });
+            };
+
+            // function untuk memunculkan daftar product
+            // asumsinya untuk API call get product list process timenya sekitar 1 detik
+            var getProduct = function () {
+                setTimeout(function () {
+                    console.log(products);
+                }, 1000);
+            };
+
+            // product yg mau ditambahkan ke database kita 
+            var newProduct = {
+                name : "Viewsonic monitor 22 inch",
+                price : 2000000
+            };
+
+            // add product setelahnya dapetin list product
+            // chaining
+            addProduct(newProduct)
+                .then(getProduct)
+                .catch(function (data) {
+                    console.log(data);
+                });
+
+        });
+    </script>
+</body>
+</html>

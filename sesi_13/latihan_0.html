@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="target">Haloha</h1>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // menunggu sampai semua HTML component kita selesai dirender oleh browser
+        $(document).ready(function () {
+            
+
+            const settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://covid-193.p.rapidapi.com/countries",
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "covid-193.p.rapidapi.com",
+                    "x-rapidapi-key": "9a55a4d74emsh846bb89df1bf693p1658e6jsn5ef59b8dd0d8"
+                }
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+            });
+
+
+            
+
+        });
+
+
+
+        
+
+
+    </script>
+</body>
+</html>
